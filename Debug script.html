@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Apple Color Emoji'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Debug Atkin API Data&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-gray-50 p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-2xl font-bold mb-6"&gt;Debug Google Apps Script API&lt;/h1&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Test Health Endpoint --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="border rounded-lg p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-lg font-semibold mb-3"&gt;Health Check&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="testHealth()" class="bg-blue-500 text-white px-4 py-2 rounded mb-3"&gt;Test Health Endpoint&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="healthResult" class="bg-gray-100 p-3 rounded text-sm overflow-auto max-h-40"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Test Options Endpoint --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="border rounded-lg p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-lg font-semibold mb-3"&gt;Options Data&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="testOptions()" class="bg-green-500 text-white px-4 py-2 rounded mb-3"&gt;Test Options Endpoint&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="optionsResult" class="bg-gray-100 p-3 rounded text-sm overflow-auto max-h-40"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Test Models Endpoint --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="border rounded-lg p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-lg font-semibold mb-3"&gt;Models Data&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="testModels()" class="bg-purple-500 text-white px-4 py-2 rounded mb-3"&gt;Test Models Endpoint&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="modelsResult" class="bg-gray-100 p-3 rounded text-sm overflow-auto max-h-40"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Direct Sheet Links --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="border rounded-lg p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-lg font-semibold mb-3"&gt;Quick Links&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="https://docs.google.com/spreadsheets/d/1pIU3AycF8uHF8pAtncp8hbvo9xY295iucBs8OtcQgrc/edit"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                       </span>target="_blank"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                       </span>class="block text-blue-600 hover:underline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span><span class="s1">📊</span> Open Google Sheet</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600"&gt;Check your MODELS and OPTIONS tabs&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Raw API Test --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mt-6 border rounded-lg p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-lg font-semibold mb-3"&gt;Raw API Test&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex gap-2 mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="customUrl"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                       </span>class="flex-1 border rounded px-3 py-2"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                       </span>placeholder="Enter custom endpoint URL..."</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>value=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="testCustomUrl()" class="bg-gray-600 text-white px-4 py-2 rounded"&gt;Test URL&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="customResult" class="bg-gray-100 p-3 rounded text-sm overflow-auto max-h-60"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const GAS_BASE = "https://script.google.com/macros/s/AKfycbzXM4ewfNZmBDi5gYszoLTZSvSWMaktHyvmvTaI3E-HcVy4_OKQIFwTWZHDbiEIlGOn/exec";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function displayResult(elementId, data, label = '') {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const element = document.getElementById(elementId);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const timestamp = new Date().toLocaleTimeString();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>element.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-xs text-gray-500 mb-2"&gt;${label} - ${timestamp}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;pre class="whitespace-pre-wrap text-xs"&gt;${JSON.stringify(data, null, 2)}&lt;/pre&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function displayError(elementId, error, label = '') {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const element = document.getElementById(elementId);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const timestamp = new Date().toLocaleTimeString();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>element.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-xs text-red-500 mb-2"&gt;<span class="s1">❌</span> ERROR - ${label} - ${timestamp}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;pre class="whitespace-pre-wrap text-xs text-red-600"&gt;${error}&lt;/pre&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function testHealth() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const url = `${GAS_BASE}?health=1&amp;_cb=${Date.now()}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Testing health:', url);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const response = await fetch(url);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const data = await response.json();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayResult('healthResult', data, 'Health Check');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Health response:', data);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayError('healthResult', error.message, 'Health Check');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Health error:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function testOptions() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const url = `${GAS_BASE}?kind=options&amp;_cb=${Date.now()}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Testing options:', url);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const response = await fetch(url);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const data = await response.json();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayResult('optionsResult', data, 'Options');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Options response:', data);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Also show what fields we found</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (data.ok &amp;&amp; data.data) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('<span class="s1">📋</span> OPTIONS FIELDS FOUND:', Object.keys(data.data));</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('<span class="s1">📋</span> SAMPLE MODEL FIELD:', data.data.MODEL);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayError('optionsResult', error.message, 'Options');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Options error:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function testModels() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const url = `${GAS_BASE}?kind=models&amp;_cb=${Date.now()}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Testing models:', url);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const response = await fetch(url);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const data = await response.json();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayResult('modelsResult', data, 'Models');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Models response:', data);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Also show what models we found</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (data.ok &amp;&amp; data.data) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('<span class="s1">🎸</span> MODELS FOUND:', Object.keys(data.data));</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const firstModel = Object.keys(data.data)[0];</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (firstModel) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>console.log('<span class="s1">🎸</span> SAMPLE MODEL DATA:', firstModel, data.data[firstModel]);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayError('modelsResult', error.message, 'Models');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Models error:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function testCustomUrl() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const url = document.getElementById('customUrl').value || GAS_BASE;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Testing custom URL:', url);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const response = await fetch(url);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const data = await response.json();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayResult('customResult', data, 'Custom URL');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Custom response:', data);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayError('customResult', error.message, 'Custom URL');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Custom error:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Auto-populate custom URL field</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('customUrl').value = `${GAS_BASE}?kind=models&amp;debug=1`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
